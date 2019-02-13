@@ -1,0 +1,24 @@
+<ActionBar class="action-bar" style="background-color: white;">
+    <Label class="action-bar-title" text="List Page"></Label>
+    <ActionItem text="Home Page" ios.position="right" (tap)="homePage()"></ActionItem>
+</ActionBar>
+
+
+<GridLayout rows="100, *, 70"> 
+    <GridLayout row="0">
+        <Label text="Click on any name/position to save to local storage. Try adding a lot. Each click adds the person 3 times." textWrap="true" style="text-align: center"></Label>
+    </GridLayout>
+    <GridLayout row="1" style="margin-top: 15px">
+        <RadListView [items]="useArray" style="margin-top: 20px; text-align: center">
+            <ng-template tkListItemTemplate let-person="item">
+                <StackLayout iosOverflowSafeArea="false" style="padding-bottom: 15px; border-top-width: 5px; border-top-color: green" >
+                    <Button textWrap="true" [text]="person.name" class="h2" textWrap="true" style="width: 100%" (tap)="clickName(person)"></Button>
+                    <Button [text]="person.role" (tap)="clickName(person)"></Button>
+                </StackLayout>
+            </ng-template>
+        </RadListView>
+    </GridLayout>
+    <GridLayout row="3" style="border-top-width: 20px; border-top-color: black;">
+        <Button text="Click to here see what you saved" (tap)="showSavedItems()" textWrap="true" class="h2"></Button>
+    </GridLayout>
+</GridLayout>

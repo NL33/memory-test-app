@@ -1,0 +1,12 @@
+<ActionBar class="action-bar" style="background-color: white;">
+    <ActionItem text="Video Page" ios.position="left" (tap)="videoPage()"></ActionItem>
+    <Label class="action-bar-title" text="Home"></Label>
+    <ActionItem text="List Page" ios.position="right" (tap)="listPage()"></ActionItem>
+</ActionBar>
+
+<StackLayout>
+    <Label text="This is the home page of the memory example app. Instructions:" style="text-align: center; margin-bottom: 15" textWrap="true"></Label>
+ 	<Label text="The goal is to build up the memory use of the app, and then return to this page and see if the memory use goes down." style="text-align: center; margin-bottom: 25" textWrap="true"></Label>
+ 	<Label text="So click on the video page to play a video. When you return here, the video object will be destroyed." style="text-align: center; margin-bottom: 15; margin-bottom: 20" textWrap="true"></Label>
+ 	<Label text="Click on the list page to view a long list. Once there, make a bunch of selections, and then click on the link at the bottom to view the list of selections. When you return here, the list will be cleared." style="text-align: center; margin-bottom: 15" textWrap="true"></Label>
+</StackLayout>

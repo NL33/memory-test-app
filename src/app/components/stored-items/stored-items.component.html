@@ -1,0 +1,23 @@
+<ActionBar class="action-bar" style="background-color: white;">
+    <Label class="action-bar-title" text="Stored Items Page"></Label>
+</ActionBar>
+
+
+<GridLayout rows="20, *, 70"> 
+    <GridLayout row="0">
+        <Label text="here are your selections. when you return to home page these will be cleared out." textWrap="true" style="text-align: center"></Label>
+    </GridLayout>
+    <GridLayout row="1" style="margin-top: 15px">
+        <RadListView [items]="selectedItems" style="margin-top: 20px">
+            <ng-template tkListItemTemplate let-person="item" >
+                <StackLayout iosOverflowSafeArea="false" style="margin-bottom: 20px; text-align: center">
+                    <Label textWrap="true" [text]="person.name" class="h2"></Label>
+                    <Label [text]="person.role"></Label>
+                </StackLayout>
+            </ng-template>
+        </RadListView>
+    </GridLayout>
+    <GridLayout row="2" style="border-top-width: 20px; border-top-color: black;">
+        <Button text="Hopefully this page is increasing memory use" textWrap="true" class="h2"></Button>
+    </GridLayout>
+</GridLayout>

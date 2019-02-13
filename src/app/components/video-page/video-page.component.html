@@ -1,0 +1,16 @@
+<ActionBar class="action-bar">
+    <Label class="action-bar-title" text="Video Page"></Label>
+    <ActionItem text="List Page" ios.position="right" (tap)="listPage()"></ActionItem>
+</ActionBar>
+
+<StackLayout>
+    <ScrollView>
+        <StackLayout>
+            <Label text="Below is a video that may load for you. Hopefully this increases the memory use so we can test the app." textWrap="true" style="text-align: center;"></Label>
+            <Label text="After you click on the video, you can also click on List Page at the top to go directly to the list page and use more memory." textWrap="true" style="text-align: center; margin-top: 25px; margin-bottom: 25px"></Label>
+        </StackLayout>
+    </ScrollView>
+    <StackLayout>
+        <VideoPlayer #videoPlayer src="{{videoURL}}" autoplay="false" height="250"></VideoPlayer>
+    </StackLayout>
+</StackLayout>
