@@ -12,7 +12,7 @@ I also executed a run webpack command, which I have found occasionally necessary
 
 $ tns run ios --bundle --env.uglify --env.aot
 
-With that, I opened up the xcode project on xcode, plugged in a device (iPhone or iPad), ran the app, and observed memory use through xcode.
+With that, I opened up the xcode project on xcode, plugged in a device (iPhone or iPad), ran the app by htting the xcode play button, and observed memory use through xcode.
 
 To build up resources, when the app is running on device: 
 
